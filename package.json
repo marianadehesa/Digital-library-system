@@ -1,0 +1,19 @@
+{
+  "name": "lab02",
+  "version": "1.0.0",
+  "description": "Sistema de gestión bibliotecaria en TypeScript con clases completas (Usuario, Libro, Préstamo, Biblioteca), interfaces y enums, métodos de gestión CRUD, generación de reportes formateados, validaciones, documentación y capturas de ejecución.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Typescript",
+    "Node.js"
+  ],
+  "author": "Diego Francisco Flores Sánchez, Karime Daniela Ávila Alcantar, Mariana Dehesa Cabrera",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^25.2.3",
+    "typescript": "^5.9.3"
+  }
+}
