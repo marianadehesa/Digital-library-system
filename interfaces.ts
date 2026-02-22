@@ -15,6 +15,14 @@ export enum CategoriaLibro {
     Arte = "Arte"
 }
 
+// Punto Extra: Tipos de materiales para la clase abstracta
+export enum TipoMaterial {
+    Libro = "Libro",
+    Revista = "Revista",
+    Tesis = "Tesis",
+    Video = "Video"
+}
+
 export enum EstadoLibro {
     Disponible = "Disponible",
     Prestado = "Prestado",
@@ -28,6 +36,13 @@ export enum EstadoPrestamo {
     Vencido = "Vencido"
 }
 
+// Punto Extra: Estados para el sistema de reservas
+export enum EstadoReserva {
+    Pendiente = "Pendiente",
+    Completada = "Completada",
+    Cancelada = "Cancelada"
+}
+
 // --- INTERFACES ---
 
 export interface IUsuario {
@@ -39,24 +54,47 @@ export interface IUsuario {
     prestamosActivos: number;
 }
 
-export interface ILibro {
-    isbn: string;
+/** * PUNTO EXTRA: Base para la clase abstracta Material
+ * Aquí definimos lo que TODO material (libro, revista, etc) debe tener.
+ */
+
+export interface IMaterial {
+    readonly id: string; 
     titulo: string;
     autor: string;
-    categoria: CategoriaLibro;
+    tipo: TipoMaterial;
     añoPublicacion: number;
     copiasDisponibles: number;
     copiasTotales: number;
     estado: EstadoLibro;
 }
 
-export interface IPrestamo {
-    id: number;
-    usuario: IUsuario; // Referencia al objeto usuario
-    libro: ILibro;     // Referencia al objeto libro
-    fechaPrestamo: Date;
-    fechaDevolucionEsperada: Date;
-    fechaDevolucionReal?: Date; // opcional
-    estado: EstadoPrestamo;
+/** * ILibro ahora hereda de IMaterial. 
+ * Solo le agregamos lo que es exclusivo de un libro.
+ */
+export interface ILibro extends IMaterial {
+    isbn: string;
+    categoria: CategoriaLibro;
 }
 
+/**
+ * PUNTO EXTRA: Interfaz para el Sistema de Reservas.
+*/
+
+export interface IReserva {
+    id: number;
+    usuario: IUsuario;
+    material: IMaterial;
+    fechaReserva: Date;
+    estado: EstadoReserva;
+}
+
+export interface IPrestamo {
+    id: number;
+    usuario: IUsuario;
+    material: IMaterial;   
+    fechaPrestamo: Date;
+    fechaDevolucionEsperada: Date;
+    fechaDevolucionReal?: Date;
+    estado: EstadoPrestamo;
+}
