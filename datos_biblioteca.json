@@ -1,0 +1,287 @@
+{
+  "usuarios": [
+    [
+      1,
+      {
+        "id": 1,
+        "_nombre": "Fernanda López Martínez",
+        "_email": "fernanda.lopez@tec.mx",
+        "tipo": "Estudiante",
+        "fechaRegistro": "2026-02-23T15:12:02.986Z",
+        "prestamosActivos": 2
+      }
+    ],
+    [
+      2,
+      {
+        "id": 2,
+        "_nombre": "Manuel Trejo González",
+        "_email": "manuel.trejo@tec.mx",
+        "tipo": "Estudiante",
+        "fechaRegistro": "2026-02-23T15:12:02.986Z",
+        "prestamosActivos": 1
+      }
+    ],
+    [
+      3,
+      {
+        "id": 3,
+        "_nombre": "Karina Robles Ortega",
+        "_email": "karina.robles@tec.mx",
+        "tipo": "Profesor",
+        "fechaRegistro": "2026-02-23T15:12:02.986Z",
+        "prestamosActivos": 1
+      }
+    ],
+    [
+      4,
+      {
+        "id": 4,
+        "_nombre": "Laura Salvador Ramírez",
+        "_email": "laura.salvador@tec.mx",
+        "tipo": "Administrador",
+        "fechaRegistro": "2026-02-23T15:12:02.986Z",
+        "prestamosActivos": 1
+      }
+    ]
+  ],
+  "libros": [
+    [
+      "9780132350884",
+      {
+        "id": "9780132350884",
+        "tipo": "Libro",
+        "isbn": "9780132350884",
+        "titulo": "Clean Code: A Handbook of Agile Software Craftsmanship",
+        "autor": "Robert C. Martin",
+        "categoria": "Tecnología",
+        "añoPublicacion": 2008,
+        "copiasTotales": 4,
+        "_copiasDisponibles": 3,
+        "estado": "Disponible"
+      }
+    ],
+    [
+      "9780135957059",
+      {
+        "id": "9780135957059",
+        "tipo": "Libro",
+        "isbn": "9780135957059",
+        "titulo": "The Pragmatic Programmer (20th Anniversary Edition)",
+        "autor": "David Thomas & Andrew Hunt",
+        "categoria": "Tecnología",
+        "añoPublicacion": 2019,
+        "copiasTotales": 3,
+        "_copiasDisponibles": 2,
+        "estado": "Disponible"
+      }
+    ],
+    [
+      "9780201633610",
+      {
+        "id": "9780201633610",
+        "tipo": "Libro",
+        "isbn": "9780201633610",
+        "titulo": "Design Patterns: Elements of Reusable Object-Oriented Software",
+        "autor": "Erich Gamma, Richard Helm, Ralph Johnson & John Vlissides",
+        "categoria": "Tecnología",
+        "añoPublicacion": 1994,
+        "copiasTotales": 2,
+        "_copiasDisponibles": 1,
+        "estado": "Disponible"
+      }
+    ],
+    [
+      "9780134685991",
+      {
+        "id": "9780134685991",
+        "tipo": "Libro",
+        "isbn": "9780134685991",
+        "titulo": "Effective Java (3rd Edition)",
+        "autor": "Joshua Bloch",
+        "categoria": "Tecnología",
+        "añoPublicacion": 2018,
+        "copiasTotales": 3,
+        "_copiasDisponibles": 2,
+        "estado": "Disponible"
+      }
+    ],
+    [
+      "9781492056355",
+      {
+        "id": "9781492056355",
+        "tipo": "Libro",
+        "isbn": "9781492056355",
+        "titulo": "Fluent Python (2nd Edition)",
+        "autor": "Luciano Ramalho",
+        "categoria": "Tecnología",
+        "añoPublicacion": 2022,
+        "copiasTotales": 4,
+        "_copiasDisponibles": 3,
+        "estado": "Disponible"
+      }
+    ],
+    [
+      "9780262033848",
+      {
+        "id": "9780262033848",
+        "tipo": "Libro",
+        "isbn": "9780262033848",
+        "titulo": "Introduction to Algorithms (3rd Edition)",
+        "autor": "Cormen, Leiserson, Rivest & Stein",
+        "categoria": "Tecnología",
+        "añoPublicacion": 2009,
+        "copiasTotales": 5,
+        "_copiasDisponibles": 5,
+        "estado": "Disponible"
+      }
+    ]
+  ],
+  "prestamos": [
+    [
+      1,
+      {
+        "id": 1,
+        "usuario": {
+          "id": 1,
+          "_nombre": "Fernanda López Martínez",
+          "_email": "fernanda.lopez@tec.mx",
+          "tipo": "Estudiante",
+          "fechaRegistro": "2026-02-23T15:12:02.986Z",
+          "prestamosActivos": 2
+        },
+        "material": {
+          "id": "9780132350884",
+          "tipo": "Libro",
+          "isbn": "9780132350884",
+          "titulo": "Clean Code: A Handbook of Agile Software Craftsmanship",
+          "autor": "Robert C. Martin",
+          "categoria": "Tecnología",
+          "añoPublicacion": 2008,
+          "copiasTotales": 4,
+          "_copiasDisponibles": 3,
+          "estado": "Disponible"
+        },
+        "fechaPrestamo": "2026-02-23T14:53:24.469Z",
+        "fechaDevolucionEsperada": "2026-03-09T14:53:24.469Z",
+        "_estado": "Activo"
+      }
+    ],
+    [
+      2,
+      {
+        "id": 2,
+        "usuario": {
+          "id": 2,
+          "_nombre": "Manuel Trejo González",
+          "_email": "manuel.trejo@tec.mx",
+          "tipo": "Estudiante",
+          "fechaRegistro": "2026-02-23T15:12:02.986Z",
+          "prestamosActivos": 1
+        },
+        "material": {
+          "id": "9780135957059",
+          "tipo": "Libro",
+          "isbn": "9780135957059",
+          "titulo": "The Pragmatic Programmer (20th Anniversary Edition)",
+          "autor": "David Thomas & Andrew Hunt",
+          "categoria": "Tecnología",
+          "añoPublicacion": 2019,
+          "copiasTotales": 3,
+          "_copiasDisponibles": 2,
+          "estado": "Disponible"
+        },
+        "fechaPrestamo": "2026-02-23T14:53:55.734Z",
+        "fechaDevolucionEsperada": "2026-03-09T14:53:55.734Z",
+        "_estado": "Activo"
+      }
+    ],
+    [
+      3,
+      {
+        "id": 3,
+        "usuario": {
+          "id": 3,
+          "_nombre": "Karina Robles Ortega",
+          "_email": "karina.robles@tec.mx",
+          "tipo": "Profesor",
+          "fechaRegistro": "2026-02-23T15:12:02.986Z",
+          "prestamosActivos": 1
+        },
+        "material": {
+          "id": "9780201633610",
+          "tipo": "Libro",
+          "isbn": "9780201633610",
+          "titulo": "Design Patterns: Elements of Reusable Object-Oriented Software",
+          "autor": "Erich Gamma, Richard Helm, Ralph Johnson & John Vlissides",
+          "categoria": "Tecnología",
+          "añoPublicacion": 1994,
+          "copiasTotales": 2,
+          "_copiasDisponibles": 1,
+          "estado": "Disponible"
+        },
+        "fechaPrestamo": "2026-02-23T14:54:30.880Z",
+        "fechaDevolucionEsperada": "2026-03-16T14:54:30.880Z",
+        "_estado": "Activo"
+      }
+    ],
+    [
+      4,
+      {
+        "id": 4,
+        "usuario": {
+          "id": 1,
+          "_nombre": "Fernanda López Martínez",
+          "_email": "fernanda.lopez@tec.mx",
+          "tipo": "Estudiante",
+          "fechaRegistro": "2026-02-23T15:12:02.986Z",
+          "prestamosActivos": 2
+        },
+        "material": {
+          "id": "9780134685991",
+          "tipo": "Libro",
+          "isbn": "9780134685991",
+          "titulo": "Effective Java (3rd Edition)",
+          "autor": "Joshua Bloch",
+          "categoria": "Tecnología",
+          "añoPublicacion": 2018,
+          "copiasTotales": 3,
+          "_copiasDisponibles": 2,
+          "estado": "Disponible"
+        },
+        "fechaPrestamo": "2026-02-23T14:54:50.114Z",
+        "fechaDevolucionEsperada": "2026-03-09T14:54:50.114Z",
+        "_estado": "Activo"
+      }
+    ],
+    [
+      5,
+      {
+        "id": 5,
+        "usuario": {
+          "id": 4,
+          "_nombre": "Laura Salvador Ramírez",
+          "_email": "laura.salvador@tec.mx",
+          "tipo": "Administrador",
+          "fechaRegistro": "2026-02-23T15:12:02.986Z",
+          "prestamosActivos": 1
+        },
+        "material": {
+          "id": "9781492056355",
+          "tipo": "Libro",
+          "isbn": "9781492056355",
+          "titulo": "Fluent Python (2nd Edition)",
+          "autor": "Luciano Ramalho",
+          "categoria": "Tecnología",
+          "añoPublicacion": 2022,
+          "copiasTotales": 4,
+          "_copiasDisponibles": 3,
+          "estado": "Disponible"
+        },
+        "fechaPrestamo": "2026-02-23T14:55:07.416Z",
+        "fechaDevolucionEsperada": "2026-03-09T14:55:07.416Z",
+        "_estado": "Activo"
+      }
+    ]
+  ]
+}

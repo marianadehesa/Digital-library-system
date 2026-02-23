@@ -1,6 +1,6 @@
 import * as fs from 'fs';
-import { Usuario, Libro, Prestamo} from './clases';
-import { CategoriaLibro, TipoUsuario, EstadoPrestamo, IReserva, EstadoReserva,} from './interfaces';
+import { Libro, Prestamo, Usuario } from './clases';
+import { CategoriaLibro, EstadoPrestamo, EstadoReserva, IReserva, TipoUsuario, } from './interfaces';
 
 export class Biblioteca {
     private nombre: string;
@@ -240,14 +240,61 @@ export class Biblioteca {
     }
 
     cargarDatos(): void {
-        if (fs.existsSync('datos_biblioteca.json')) {
-            const rawData = fs.readFileSync('datos_biblioteca.json', 'utf-8');
-            const datos = JSON.parse(rawData);
+    if (!fs.existsSync('datos_biblioteca.json')) return;
 
-            this.usuarios = new Map(datos.usuarios);
-            this.libros = new Map(datos.libros); 
+    const rawData = fs.readFileSync('datos_biblioteca.json', 'utf-8');
+    const datos = JSON.parse(rawData);
 
-            console.log("Datos cargados correctamente.");
+    // Usuarios
+    this.usuarios = new Map();
+    datos.usuarios.forEach(([id, u]: any) => {
+        const usuario = new Usuario(u.id, u._nombre, u._email, u.tipo);
+        usuario.prestamosActivos = u.prestamosActivos;
+        this.usuarios.set(Number(id), usuario);
+    });
+
+    // Libros
+    this.libros = new Map();
+    datos.libros.forEach(([isbn, l]: any) => {
+        const libro = new Libro(
+            l.isbn,
+            l.titulo,
+            l.autor,
+            l.categoria,
+            l.añoPublicacion,
+            l.copiasTotales
+        );
+
+        // Restaurar copias disponibles
+        (libro as any)._copiasDisponibles = l._copiasDisponibles;
+
+        this.libros.set(isbn, libro);
+    });
+
+    // Prestamos
+    this.prestamos = new Map();
+    datos.prestamos.forEach(([id, p]: any) => {
+        const usuario = this.usuarios.get(p.usuario.id);
+        const libro = this.libros.get(p.material.isbn);
+
+        if (usuario && libro) {
+            const prestamo = new Prestamo(
+                Number(id),
+                usuario,
+                libro,
+                14 // Días por defecto
+            );
+
+            prestamo.fechaPrestamo = new Date(p.fechaPrestamo);
+            prestamo.fechaDevolucionEsperada = new Date(p.fechaDevolucionEsperada);
+            (prestamo as any)._estado = p._estado;
+
+            this.prestamos.set(Number(id), prestamo);
         }
-    }
+    });
+
+    // Restaurar contador
+    this.contadorPrestamos = this.prestamos.size + 1;
+    console.log("Datos cargados correctamente.");
+}
 }
