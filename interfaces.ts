@@ -1,5 +1,3 @@
-// --- Enums ---
-
 export enum TipoUsuario {
     Estudiante = "Estudiante",
     Profesor = "Profesor",
@@ -15,7 +13,6 @@ export enum CategoriaLibro {
     Arte = "Arte"
 }
 
-// Punto Extra: Tipos de materiales para la clase abstracta
 export enum TipoMaterial {
     Libro = "Libro",
     Revista = "Revista",
@@ -36,14 +33,11 @@ export enum EstadoPrestamo {
     Vencido = "Vencido"
 }
 
-// Punto Extra: Estados para el sistema de reservas
 export enum EstadoReserva {
     Pendiente = "Pendiente",
     Completada = "Completada",
     Cancelada = "Cancelada"
 }
-
-// --- INTERFACES ---
 
 export interface IUsuario {
     id: number;
@@ -53,10 +47,6 @@ export interface IUsuario {
     fechaRegistro: Date;
     prestamosActivos: number;
 }
-
-/** * PUNTO EXTRA: Base para la clase abstracta Material
- * Aquí definimos lo que TODO material (libro, revista, etc) debe tener.
- */
 
 export interface IMaterial {
     readonly id: string; 
@@ -69,17 +59,10 @@ export interface IMaterial {
     estado: EstadoLibro;
 }
 
-/** * ILibro ahora hereda de IMaterial. 
- * Solo le agregamos lo que es exclusivo de un libro.
- */
 export interface ILibro extends IMaterial {
     isbn: string;
     categoria: CategoriaLibro;
 }
-
-/**
- * PUNTO EXTRA: Interfaz para el Sistema de Reservas.
-*/
 
 export interface IReserva {
     id: number;

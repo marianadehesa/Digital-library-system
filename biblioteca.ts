@@ -21,7 +21,7 @@ export class Biblioteca {
         this.contadorReservas = 1;
     }
 
-// Métodos de Gestión de Usuarios
+    // Métodos de Gestión de Usuarios
 
     registrarUsuario(nombre: string, email: string, tipo: TipoUsuario): Usuario {
         const id = this.usuarios.size + 1;
@@ -36,7 +36,7 @@ export class Biblioteca {
         return this.usuarios.get(id);
     }
 
-// Métodos de Gestión de Libros
+    // Métodos de Gestión de Libros
 
     agregarLibro(isbn: string, titulo: string, autor: string, categoria: CategoriaLibro, año: number, copias: number): Libro {
         const nuevoLibro = new Libro(isbn, titulo, autor, categoria, año, copias);
@@ -61,18 +61,17 @@ export class Biblioteca {
         );
     }
 
-// Métodos de Gestión de Préstamos
+    // Métodos de Gestión de Préstamos
 
     realizarPrestamo(usuarioId: number, isbn: string, dias: number = 14): Prestamo | null {
         const usuario = this.obtenerUsuario(usuarioId);
         const libro = this.obtenerLibro(isbn);
 
-        // Validaciones para el préstamo
-
         if (!usuario) {
             console.error("Error: Usuario no encontrado.");
             return null;
         }
+
         if (!libro) {
             console.error("Error: Libro no encontrado.");
             return null;
@@ -151,8 +150,8 @@ export class Biblioteca {
             console.log(`Reserva #${nuevaReserva.id} creada para el libro: "${libro.titulo}". Te avisaremos cuando haya copias.`);
         }
     }
-
-// Métodos de Reportes
+    
+    // Métodos de Reportes
 
     generarReporteLibrosMasPrestados(top: number = 5): void {
         console.log(`\n--- TOP ${top} LIBROS MÁS PRESTADOS ---`);
@@ -240,61 +239,55 @@ export class Biblioteca {
     }
 
     cargarDatos(): void {
-    if (!fs.existsSync('datos_biblioteca.json')) return;
+        if (!fs.existsSync('datos_biblioteca.json')) return;
 
-    const rawData = fs.readFileSync('datos_biblioteca.json', 'utf-8');
-    const datos = JSON.parse(rawData);
+        const rawData = fs.readFileSync('datos_biblioteca.json', 'utf-8');
+        const datos = JSON.parse(rawData);
 
-    // Usuarios
-    this.usuarios = new Map();
-    datos.usuarios.forEach(([id, u]: any) => {
-        const usuario = new Usuario(u.id, u._nombre, u._email, u.tipo);
-        usuario.prestamosActivos = u.prestamosActivos;
-        this.usuarios.set(Number(id), usuario);
-    });
+        this.usuarios = new Map();
+        datos.usuarios.forEach(([id, u]: any) => {
+            const usuario = new Usuario(u.id, u._nombre, u._email, u.tipo);
+            usuario.prestamosActivos = u.prestamosActivos;
+            this.usuarios.set(Number(id), usuario);
+        });
 
-    // Libros
-    this.libros = new Map();
-    datos.libros.forEach(([isbn, l]: any) => {
-        const libro = new Libro(
-            l.isbn,
-            l.titulo,
-            l.autor,
-            l.categoria,
-            l.añoPublicacion,
-            l.copiasTotales
-        );
-
-        // Restaurar copias disponibles
-        (libro as any)._copiasDisponibles = l._copiasDisponibles;
-
-        this.libros.set(isbn, libro);
-    });
-
-    // Prestamos
-    this.prestamos = new Map();
-    datos.prestamos.forEach(([id, p]: any) => {
-        const usuario = this.usuarios.get(p.usuario.id);
-        const libro = this.libros.get(p.material.isbn);
-
-        if (usuario && libro) {
-            const prestamo = new Prestamo(
-                Number(id),
-                usuario,
-                libro,
-                14 // Días por defecto
+        this.libros = new Map();
+        datos.libros.forEach(([isbn, l]: any) => {
+            const libro = new Libro(
+                l.isbn,
+                l.titulo,
+                l.autor,
+                l.categoria,
+                l.añoPublicacion,
+                l.copiasTotales
             );
 
-            prestamo.fechaPrestamo = new Date(p.fechaPrestamo);
-            prestamo.fechaDevolucionEsperada = new Date(p.fechaDevolucionEsperada);
-            (prestamo as any)._estado = p._estado;
+            (libro as any)._copiasDisponibles = l._copiasDisponibles;
+            this.libros.set(isbn, libro);
+        });
 
-            this.prestamos.set(Number(id), prestamo);
-        }
-    });
+        this.prestamos = new Map();
+        
+        datos.prestamos.forEach(([id, p]: any) => {
+            const usuario = this.usuarios.get(p.usuario.id);
+            const libro = this.libros.get(p.material.isbn);
 
-    // Restaurar contador
-    this.contadorPrestamos = this.prestamos.size + 1;
-    console.log("Datos cargados correctamente.");
-}
+            if (usuario && libro) {
+                const prestamo = new Prestamo(
+                    Number(id),
+                    usuario,
+                    libro,
+                    14
+                );
+
+                prestamo.fechaPrestamo = new Date(p.fechaPrestamo);
+                prestamo.fechaDevolucionEsperada = new Date(p.fechaDevolucionEsperada);
+                (prestamo as any)._estado = p._estado;
+
+                this.prestamos.set(Number(id), prestamo);
+            };
+        });
+        this.contadorPrestamos = this.prestamos.size + 1;
+        console.log("Datos cargados correctamente.");
+    }
 }
