@@ -12,12 +12,15 @@ Una institución educativa requiere modernizar su sistema de gestión biblioteca
 
 ## Como Compilar y ejecutar
 
-Al abrir la carpeta en la terminal, será necesario ejecutar el comando ```bash
+Al abrir la carpeta en la terminal, será necesario ejecutar el comando 
+```bash
 npm install
 ```
-Se descargarán todas las depeencias necesarias para compilar y ejecutar el proyecto. Siguiente paso será ejecutar el comando ```bash
+Se descargarán todas las depeencias necesarias para compilar y ejecutar el proyecto. Siguiente paso será ejecutar el comando 
+```bash
 tsc --strict
 ```
-Al ejecutar el comando, se compilarán todos los archivos y ahora sí, se podrá ejecutar con el comando ```bash
+Al ejecutar el comando, se compilarán todos los archivos y ahora sí, se podrá ejecutar con el comando 
+```bash
 node main.js
 ````
