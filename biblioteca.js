@@ -86,7 +86,6 @@ class Biblioteca {
     realizarPrestamo(usuarioId, isbn, dias = 14) {
         const usuario = this.obtenerUsuario(usuarioId);
         const libro = this.obtenerLibro(isbn);
-        // Validaciones para el préstamo
         if (!usuario) {
             console.error("Error: Usuario no encontrado.");
             return null;
@@ -212,13 +211,13 @@ class Biblioteca {
             libros: Array.from(this.libros.entries()),
             prestamos: Array.from(this.prestamos.entries())
         };
-        fs.writeFileSync('datos_biblioteca.json', JSON.stringify(datos, null, 2));
-        console.log("Los datos fueron guardados de manera exitosa en 'datos_biblioteca.json'");
+        fs.writeFileSync('RespaldoBiblioteca.json', JSON.stringify(datos, null, 2));
+        console.log("Los datos fueron guardados de manera exitosa en 'RespaldoBiblioteca.json'");
     }
     cargarDatos() {
-        if (!fs.existsSync('datos_biblioteca.json'))
+        if (!fs.existsSync('RespaldoBiblioteca.json'))
             return;
-        const rawData = fs.readFileSync('datos_biblioteca.json', 'utf-8');
+        const rawData = fs.readFileSync('RespaldoBiblioteca.json', 'utf-8');
         const datos = JSON.parse(rawData);
         this.usuarios = new Map();
         datos.usuarios.forEach(([id, u]) => {
@@ -245,7 +244,6 @@ class Biblioteca {
             }
             ;
         });
-        // Restaurar contador
         this.contadorPrestamos = this.prestamos.size + 1;
         console.log("Datos cargados correctamente.");
     }

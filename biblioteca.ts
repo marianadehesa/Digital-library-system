@@ -234,14 +234,14 @@ export class Biblioteca {
             prestamos: Array.from(this.prestamos.entries())
         };
         
-        fs.writeFileSync('datos_biblioteca.json', JSON.stringify(datos, null, 2));
-        console.log("Los datos fueron guardados de manera exitosa en 'datos_biblioteca.json'");
+        fs.writeFileSync('RespaldoBiblioteca.json', JSON.stringify(datos, null, 2));
+        console.log("Los datos fueron guardados de manera exitosa en 'RespaldoBiblioteca.json'");
     }
 
     cargarDatos(): void {
-        if (!fs.existsSync('datos_biblioteca.json')) return;
+        if (!fs.existsSync('RespaldoBiblioteca.json')) return;
 
-        const rawData = fs.readFileSync('datos_biblioteca.json', 'utf-8');
+        const rawData = fs.readFileSync('RespaldoBiblioteca.json', 'utf-8');
         const datos = JSON.parse(rawData);
 
         this.usuarios = new Map();

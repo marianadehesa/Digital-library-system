@@ -1,0 +1,413 @@
+{
+  "usuarios": [
+    [
+      1,
+      {
+        "id": 1,
+        "_nombre": "Diego Flores",
+        "_email": "diego.flores@upaepTEC.edu.mx",
+        "tipo": "Estudiante",
+        "fechaRegistro": "2026-03-03T01:30:18.766Z",
+        "prestamosActivos": 2
+      }
+    ],
+    [
+      2,
+      {
+        "id": 2,
+        "_nombre": "Karime Avila",
+        "_email": "karime.avila@upaepTEC.edu.mx",
+        "tipo": "Estudiante",
+        "fechaRegistro": "2026-03-03T01:30:18.766Z",
+        "prestamosActivos": 1
+      }
+    ],
+    [
+      3,
+      {
+        "id": 3,
+        "_nombre": "Mariana Dehesa",
+        "_email": "mariaa.dehesa@upaepTEC.edu.mx",
+        "tipo": "Estudiante",
+        "fechaRegistro": "2026-03-03T01:30:18.766Z",
+        "prestamosActivos": 1
+      }
+    ],
+    [
+      4,
+      {
+        "id": 4,
+        "_nombre": "Roberto Salazar",
+        "_email": "roberto.salazar@upaepTEC.edu.mx",
+        "tipo": "Profesor",
+        "fechaRegistro": "2026-03-03T01:30:18.766Z",
+        "prestamosActivos": 1
+      }
+    ],
+    [
+      5,
+      {
+        "id": 5,
+        "_nombre": "Joaquin Herrera",
+        "_email": "joaquin.herrera@upaepTEC.edu.mx",
+        "tipo": "Administrador",
+        "fechaRegistro": "2026-03-03T01:30:18.766Z",
+        "prestamosActivos": 1
+      }
+    ],
+    [
+      6,
+      {
+        "id": 6,
+        "_nombre": "Francisco Sanchez",
+        "_email": "francisco.sanchez@upaepTEC.edu.mx",
+        "tipo": "Estudiante",
+        "fechaRegistro": "2026-03-03T01:31:36.294Z",
+        "prestamosActivos": 0
+      }
+    ]
+  ],
+  "libros": [
+    [
+      "9780132350884",
+      {
+        "id": "9780132350884",
+        "tipo": "Libro",
+        "isbn": "9780132350884",
+        "titulo": "Clean Code: A Handbook of Agile Software Craftsmanship",
+        "autor": "Robert C. Martin",
+        "categoria": "Tecnología",
+        "añoPublicacion": 2008,
+        "_copiasDisponibles": 2,
+        "copiasTotales": 3,
+        "estado": "Disponible"
+      }
+    ],
+    [
+      "9780135957059",
+      {
+        "id": "9780135957059",
+        "tipo": "Libro",
+        "isbn": "9780135957059",
+        "titulo": "The Pragmatic Programmer: Your Journey to Mastery (20th Anniversary Edition)",
+        "autor": "Andrew Hunt y David Thomas",
+        "categoria": "Tecnología",
+        "añoPublicacion": 2019,
+        "_copiasDisponibles": 0,
+        "copiasTotales": 2,
+        "estado": "Disponible"
+      }
+    ],
+    [
+      "9780201633610",
+      {
+        "id": "9780201633610",
+        "tipo": "Libro",
+        "isbn": "9780201633610",
+        "titulo": "Design Patterns: Elements of Reusable Object-Oriented Software",
+        "autor": "Erich Gamma, Richard Helm, Ralph Johnson y John Vlissides",
+        "categoria": "Tecnología",
+        "añoPublicacion": 1994,
+        "_copiasDisponibles": 5,
+        "copiasTotales": 5,
+        "estado": "Disponible"
+      }
+    ],
+    [
+      "9780307474728",
+      {
+        "id": "9780307474728",
+        "tipo": "Libro",
+        "isbn": "9780307474728",
+        "titulo": "Cien años de soledad",
+        "autor": "Gabriel García Márquez",
+        "categoria": "Ficción",
+        "añoPublicacion": 1967,
+        "_copiasDisponibles": 1,
+        "copiasTotales": 2,
+        "estado": "Disponible"
+      }
+    ],
+    [
+      "9780062316097",
+      {
+        "id": "9780062316097",
+        "tipo": "Libro",
+        "isbn": "9780062316097",
+        "titulo": "De animales a dioses",
+        "autor": "Yuval Noah Harari",
+        "categoria": "No Ficción",
+        "añoPublicacion": 2011,
+        "_copiasDisponibles": 2,
+        "copiasTotales": 3,
+        "estado": "Disponible"
+      }
+    ],
+    [
+      "978-0553380163",
+      {
+        "id": "978-0553380163",
+        "tipo": "Libro",
+        "isbn": "978-0553380163",
+        "titulo": "A Brief History of Time",
+        "autor": "Stephen Hawking",
+        "categoria": "Ciencia",
+        "añoPublicacion": 1988,
+        "_copiasDisponibles": 1,
+        "copiasTotales": 1,
+        "estado": "Disponible"
+      }
+    ],
+    [
+      "978-0393317558",
+      {
+        "id": "978-0393317558",
+        "tipo": "Libro",
+        "isbn": "978-0393317558",
+        "titulo": "Guns, Germs, and Steel",
+        "autor": "Jared Diamond",
+        "categoria": "Historia",
+        "añoPublicacion": 1997,
+        "_copiasDisponibles": 2,
+        "copiasTotales": 2,
+        "estado": "Disponible"
+      }
+    ],
+    [
+      "978-0714832470",
+      {
+        "id": "978-0714832470",
+        "tipo": "Libro",
+        "isbn": "978-0714832470",
+        "titulo": "The Story of Art",
+        "autor": "E. H. Gombrich",
+        "categoria": "Arte",
+        "añoPublicacion": 1950,
+        "_copiasDisponibles": 3,
+        "copiasTotales": 4,
+        "estado": "Disponible"
+      }
+    ],
+    [
+      "9786073802536",
+      {
+        "id": "9786073802536",
+        "tipo": "Libro",
+        "isbn": "9786073802536",
+        "titulo": "Proyecto Hail Mary",
+        "autor": "Andy Weir",
+        "categoria": "Ficción",
+        "añoPublicacion": 2021,
+        "_copiasDisponibles": 5,
+        "copiasTotales": 5,
+        "estado": "Disponible"
+      }
+    ]
+  ],
+  "prestamos": [
+    [
+      1,
+      {
+        "id": 1,
+        "usuario": {
+          "id": 1,
+          "_nombre": "Diego Flores",
+          "_email": "diego.flores@upaepTEC.edu.mx",
+          "tipo": "Estudiante",
+          "fechaRegistro": "2026-03-03T01:30:18.766Z",
+          "prestamosActivos": 2
+        },
+        "material": {
+          "id": "9780132350884",
+          "tipo": "Libro",
+          "isbn": "9780132350884",
+          "titulo": "Clean Code: A Handbook of Agile Software Craftsmanship",
+          "autor": "Robert C. Martin",
+          "categoria": "Tecnología",
+          "añoPublicacion": 2008,
+          "_copiasDisponibles": 2,
+          "copiasTotales": 3,
+          "estado": "Disponible"
+        },
+        "fechaPrestamo": "2026-03-03T01:21:53.267Z",
+        "fechaDevolucionEsperada": "2026-03-13T01:21:53.267Z",
+        "_estado": "Activo"
+      }
+    ],
+    [
+      2,
+      {
+        "id": 2,
+        "usuario": {
+          "id": 2,
+          "_nombre": "Karime Avila",
+          "_email": "karime.avila@upaepTEC.edu.mx",
+          "tipo": "Estudiante",
+          "fechaRegistro": "2026-03-03T01:30:18.766Z",
+          "prestamosActivos": 1
+        },
+        "material": {
+          "id": "9780307474728",
+          "tipo": "Libro",
+          "isbn": "9780307474728",
+          "titulo": "Cien años de soledad",
+          "autor": "Gabriel García Márquez",
+          "categoria": "Ficción",
+          "añoPublicacion": 1967,
+          "_copiasDisponibles": 1,
+          "copiasTotales": 2,
+          "estado": "Disponible"
+        },
+        "fechaPrestamo": "2026-03-03T01:22:30.798Z",
+        "fechaDevolucionEsperada": "2026-03-11T01:22:30.798Z",
+        "_estado": "Activo"
+      }
+    ],
+    [
+      3,
+      {
+        "id": 3,
+        "usuario": {
+          "id": 3,
+          "_nombre": "Mariana Dehesa",
+          "_email": "mariaa.dehesa@upaepTEC.edu.mx",
+          "tipo": "Estudiante",
+          "fechaRegistro": "2026-03-03T01:30:18.766Z",
+          "prestamosActivos": 1
+        },
+        "material": {
+          "id": "9780135957059",
+          "tipo": "Libro",
+          "isbn": "9780135957059",
+          "titulo": "The Pragmatic Programmer: Your Journey to Mastery (20th Anniversary Edition)",
+          "autor": "Andrew Hunt y David Thomas",
+          "categoria": "Tecnología",
+          "añoPublicacion": 2019,
+          "_copiasDisponibles": 0,
+          "copiasTotales": 2,
+          "estado": "Disponible"
+        },
+        "fechaPrestamo": "2026-03-03T01:24:16.654Z",
+        "fechaDevolucionEsperada": "2026-03-08T01:24:16.654Z",
+        "_estado": "Activo"
+      }
+    ],
+    [
+      4,
+      {
+        "id": 4,
+        "usuario": {
+          "id": 4,
+          "_nombre": "Roberto Salazar",
+          "_email": "roberto.salazar@upaepTEC.edu.mx",
+          "tipo": "Profesor",
+          "fechaRegistro": "2026-03-03T01:30:18.766Z",
+          "prestamosActivos": 1
+        },
+        "material": {
+          "id": "978-0714832470",
+          "tipo": "Libro",
+          "isbn": "978-0714832470",
+          "titulo": "The Story of Art",
+          "autor": "E. H. Gombrich",
+          "categoria": "Arte",
+          "añoPublicacion": 1950,
+          "_copiasDisponibles": 3,
+          "copiasTotales": 4,
+          "estado": "Disponible"
+        },
+        "fechaPrestamo": "2026-03-03T01:25:33.490Z",
+        "fechaDevolucionEsperada": "2026-03-24T01:25:33.490Z",
+        "_estado": "Activo"
+      }
+    ],
+    [
+      5,
+      {
+        "id": 5,
+        "usuario": {
+          "id": 1,
+          "_nombre": "Diego Flores",
+          "_email": "diego.flores@upaepTEC.edu.mx",
+          "tipo": "Estudiante",
+          "fechaRegistro": "2026-03-03T01:30:18.766Z",
+          "prestamosActivos": 2
+        },
+        "material": {
+          "id": "9780135957059",
+          "tipo": "Libro",
+          "isbn": "9780135957059",
+          "titulo": "The Pragmatic Programmer: Your Journey to Mastery (20th Anniversary Edition)",
+          "autor": "Andrew Hunt y David Thomas",
+          "categoria": "Tecnología",
+          "añoPublicacion": 2019,
+          "_copiasDisponibles": 0,
+          "copiasTotales": 2,
+          "estado": "Disponible"
+        },
+        "fechaPrestamo": "2026-03-03T01:26:14.880Z",
+        "fechaDevolucionEsperada": "2026-03-06T01:26:14.880Z",
+        "_estado": "Activo"
+      }
+    ],
+    [
+      6,
+      {
+        "id": 6,
+        "usuario": {
+          "id": 5,
+          "_nombre": "Joaquin Herrera",
+          "_email": "joaquin.herrera@upaepTEC.edu.mx",
+          "tipo": "Administrador",
+          "fechaRegistro": "2026-03-03T01:30:18.766Z",
+          "prestamosActivos": 1
+        },
+        "material": {
+          "id": "9780062316097",
+          "tipo": "Libro",
+          "isbn": "9780062316097",
+          "titulo": "De animales a dioses",
+          "autor": "Yuval Noah Harari",
+          "categoria": "No Ficción",
+          "añoPublicacion": 2011,
+          "_copiasDisponibles": 2,
+          "copiasTotales": 3,
+          "estado": "Disponible"
+        },
+        "fechaPrestamo": "2026-03-03T01:26:44.012Z",
+        "fechaDevolucionEsperada": "2026-03-17T01:26:44.012Z",
+        "_estado": "Activo"
+      }
+    ],
+    [
+      7,
+      {
+        "id": 7,
+        "usuario": {
+          "id": 6,
+          "_nombre": "Francisco Sanchez",
+          "_email": "francisco.sanchez@upaepTEC.edu.mx",
+          "tipo": "Estudiante",
+          "fechaRegistro": "2026-03-03T01:31:36.294Z",
+          "prestamosActivos": 0
+        },
+        "material": {
+          "id": "9786073802536",
+          "tipo": "Libro",
+          "isbn": "9786073802536",
+          "titulo": "Proyecto Hail Mary",
+          "autor": "Andy Weir",
+          "categoria": "Ficción",
+          "añoPublicacion": 2021,
+          "_copiasDisponibles": 5,
+          "copiasTotales": 5,
+          "estado": "Disponible"
+        },
+        "fechaPrestamo": "2026-03-03T01:34:05.889Z",
+        "fechaDevolucionEsperada": "2026-03-16T01:34:05.889Z",
+        "fechaDevolucionReal": "2026-03-03T01:34:34.608Z",
+        "_estado": "Devuelto"
+      }
+    ]
+  ]
+}

@@ -1,5 +1,4 @@
 "use strict";
-// --- Enums ---
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.EstadoReserva = exports.EstadoPrestamo = exports.EstadoLibro = exports.TipoMaterial = exports.CategoriaLibro = exports.TipoUsuario = void 0;
 var TipoUsuario;
@@ -17,7 +16,6 @@ var CategoriaLibro;
     CategoriaLibro["Historia"] = "Historia";
     CategoriaLibro["Arte"] = "Arte";
 })(CategoriaLibro || (exports.CategoriaLibro = CategoriaLibro = {}));
-// Punto Extra: Tipos de materiales para la clase abstracta
 var TipoMaterial;
 (function (TipoMaterial) {
     TipoMaterial["Libro"] = "Libro";
@@ -38,7 +36,6 @@ var EstadoPrestamo;
     EstadoPrestamo["Devuelto"] = "Devuelto";
     EstadoPrestamo["Vencido"] = "Vencido";
 })(EstadoPrestamo || (exports.EstadoPrestamo = EstadoPrestamo = {}));
-// Punto Extra: Estados para el sistema de reservas
 var EstadoReserva;
 (function (EstadoReserva) {
     EstadoReserva["Pendiente"] = "Pendiente";

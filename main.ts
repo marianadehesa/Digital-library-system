@@ -63,39 +63,66 @@ function mostrarMenu() {
 
             rl.question("Autor del libro: ", (autor) => {
 
+             
               rl.question(
+             
                 "Categoría (Ficcion, NoFiccion, Ciencia, Tecnologia, Historia, Arte): ",
+             
                 (catStr) => {
+             
                   const categoria =
-                    CategoriaLibro[catStr as keyof typeof CategoriaLibro];
+             
+                  CategoriaLibro[catStr as keyof typeof CategoriaLibro];
 
+
+                  
                   if (!categoria) {
+                  
                     console.log("Categoría inválida.");
+                  
                     mostrarMenu();
+                  
                     return;
+                  
                   }
 
+
+                  
                   rl.question("Año de publicación: ", (añoStr) => {
+                  
                     const año = Number(añoStr);
 
+
+                    
                     rl.question("Número de copias: ", (copiasStr) => {
+                    
                       const copias = Number(copiasStr);
 
+
+                      
                       biblioteca.agregarLibro(
+                      
                         isbn,
+                      
                         titulo,
+                      
                         autor,
+                      
                         categoria,
+                      
                         año,
+                      
                         copias,
+                      
                       );
+                      
                       mostrarMenu();
                     });
                   });
                 },
               );
             });
-          });
+          });        
         });
       break;
 
@@ -158,19 +185,19 @@ function mostrarMenu() {
               CategoriaLibro[catStr as keyof typeof CategoriaLibro];
 
             if (!categoria) {
-              console.log("❌ Categoría inválida.");
+              console.log("Categoría inválida.");
             } else {
               const librosEncontrados =
                 biblioteca.buscarLibrosPorCategoria(categoria);
               console.log(
-                `\n--- 🔎 Libros encontrados en la categoría: ${categoria} ---`,
+                `\nLibros encontrados en la categoría: ${categoria} ---`,
               );
 
               if (librosEncontrados.length === 0) {
                 console.log("No se encontraron libros en esta categoría.");
               } else {
                 librosEncontrados.forEach((libro) =>
-                  console.log(`📖 ${libro.titulo}`),
+                  console.log(`${libro.titulo}`),
                 );
               }
             }
@@ -181,16 +208,16 @@ function mostrarMenu() {
 
       case "10":
         rl.question(
-          "Nombre del autor a buscar (ej. 'Robert C. Martin'): ",
+          "Nombre del autor a buscar: ",
           (autorStr) => {
             const librosEncontrados = biblioteca.buscarLibrosPorAutor(autorStr);
-            console.log(`\n---Libros encontrados del autor: ${autorStr} ---`);
+            console.log(`\n-Libros encontrados del autor: ${autorStr}`);
 
             if (librosEncontrados.length === 0) {
               console.log("No se encontraron libros de este autor.");
             } else {
               librosEncontrados.forEach((libro) =>
-                console.log(`📖 ${libro.titulo}`),
+                console.log(`${libro.titulo}`),
               );
             }
             mostrarMenu();

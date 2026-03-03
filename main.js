@@ -144,30 +144,30 @@ function mostrarMenu() {
                 rl.question("Categoría a buscar (Ficcion, NoFiccion, Ciencia, Tecnologia, Historia, Arte): ", (catStr) => {
                     const categoria = interfaces_1.CategoriaLibro[catStr];
                     if (!categoria) {
-                        console.log("❌ Categoría inválida.");
+                        console.log("Categoría inválida.");
                     }
                     else {
                         const librosEncontrados = biblioteca.buscarLibrosPorCategoria(categoria);
-                        console.log(`\n--- 🔎 Libros encontrados en la categoría: ${categoria} ---`);
+                        console.log(`\nLibros encontrados en la categoría: ${categoria} ---`);
                         if (librosEncontrados.length === 0) {
                             console.log("No se encontraron libros en esta categoría.");
                         }
                         else {
-                            librosEncontrados.forEach((libro) => console.log(`📖 ${libro.titulo}`));
+                            librosEncontrados.forEach((libro) => console.log(`${libro.titulo}`));
                         }
                     }
                     mostrarMenu();
                 });
                 break;
             case "10":
-                rl.question("Nombre del autor a buscar (ej. 'Robert C. Martin'): ", (autorStr) => {
+                rl.question("Nombre del autor a buscar: ", (autorStr) => {
                     const librosEncontrados = biblioteca.buscarLibrosPorAutor(autorStr);
-                    console.log(`\n---Libros encontrados del autor: ${autorStr} ---`);
+                    console.log(`\n-Libros encontrados del autor: ${autorStr}`);
                     if (librosEncontrados.length === 0) {
                         console.log("No se encontraron libros de este autor.");
                     }
                     else {
-                        librosEncontrados.forEach((libro) => console.log(`📖 ${libro.titulo}`));
+                        librosEncontrados.forEach((libro) => console.log(`${libro.titulo}`));
                     }
                     mostrarMenu();
                 });
@@ -183,5 +183,4 @@ function mostrarMenu() {
         }
     });
 }
-// Inicia el menú
 mostrarMenu();
