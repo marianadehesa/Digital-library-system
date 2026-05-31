@@ -1,26 +1,30 @@
 # lab02
 
-# Laboratorio Práctico: Sistema de Gestión de Biblioteca Digital
+# 📚 Laboratorio Práctico: Sistema de Gestión de Biblioteca Digital
 
-## Objetivo General
+## 🎯 Objetivo General
 
 Aplicar los fundamentos de TypeScript incluyendo tipos de datos, interfaces, clases, programación orientada a objetos y funcionalidades avanzadas de sintaxis para desarrollar un sistema funcional de gestión de biblioteca digital.
 
-## Planteamiento del Problema
+##📌 Planteamiento del Problema
 
-Una institución educativa requiere modernizar su sistema de gestión bibliotecaria. El sistema actual carece de validación de datos, control de acceso y reportes estructurados. Se necesita desarrollar una solución en TypeScript que permita gestionar usuarios, libros, préstamos y generar reportes con alta confiabilidad y mantenibilidad.
+Una institución educativa necesita modernizar su sistema de biblioteca.  
+El sistema actual no tiene validación de datos, control de acceso ni reportes estructurados.
 
-## Requisitos
+Se requiere una solución en **TypeScript** que permita gestionar usuarios, libros, préstamos y generar reportes confiables.
+
+## ⚙️ Requisitos
+
 - Node.js v18 o superior
 - npm
 
-## Como Compilar y ejecutar
+## 🚀 Instalación y ejecución
 
 Al abrir la carpeta en la terminal, será necesario ejecutar el comando para instalar las dependencias para compilar y ejecutar el comando
 ```bash
 npm install
 ```
-Este comando es específicamente para compilar todo el proyecto entero 
+Este comando es específicamente para compilar todo el proyecto 
 ```bash
 tsc --strict
 ```
@@ -29,7 +33,7 @@ Este comando ejecuta el sistema
 node main.js
 ````
 
-## Funcionalidades
+## 📚 Funcionalidades
 
 - Registro de usuarios (Estudiante, Profesor, Administrador)
 - Gestión de catálogo de libros
